@@ -27,22 +27,28 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
       onClick={onClose}
     >
       <div 
-        className="bg-white rounded-lg shadow-xl max-w-md w-full p-8 animate-scale-in"
+        className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full animate-scale-in max-h-[85vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between items-center mb-6">
-          <h3 className="text-2xl font-bold text-primary">{title}</h3>
-          <button
-            onClick={onClose}
-            className="text-gray-400 hover:text-gray-600 transition-colors"
-            aria-label="閉じる"
-          >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+        {/* Close button - positioned outside the content area */}
+        <button
+          onClick={onClose}
+          className="absolute -top-3 -right-3 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-lg text-gray-400 hover:text-gray-600 hover:bg-gray-50 transition-all duration-200 hover:scale-110"
+          aria-label="閉じる"
+        >
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        
+        {/* Header with gradient accent */}
+        <div className="relative px-8 pt-8 pb-6 border-b border-gray-100">
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-cyan-500 rounded-t-2xl"></div>
+          <h3 className="text-xl font-bold text-primary pr-4 leading-relaxed">{title}</h3>
         </div>
-        <div className="text-gray-700">
+        
+        {/* Content */}
+        <div className="text-gray-700 flex-1 min-h-0 overflow-y-auto px-8 py-6">
           {children}
         </div>
       </div>
@@ -51,5 +57,3 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
 };
 
 export default Modal;
-
-
