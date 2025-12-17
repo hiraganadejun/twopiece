@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import CaseStudies from './components/CaseStudies';
 import Policy from './components/Policy';
 import FAQ from './components/FAQ';
 import News from './components/News';
@@ -16,6 +17,7 @@ const App: React.FC = () => {
       <main className="flex-grow">
         <Hero />
         <Services />
+        <CaseStudies />
         <Policy />
         <FAQ />
         <News />

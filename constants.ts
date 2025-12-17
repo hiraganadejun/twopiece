@@ -1,4 +1,4 @@
-import { NavItem, ServiceItem, CompanyInfo, FaqItem, PolicyItem } from './types';
+import { NavItem, ServiceItem, CompanyInfo, FaqItem, PolicyItem, CaseStudyItem } from './types';
 
 export const COMPANY_NAME = "株式会社ツーピース";
 export const COMPANY_NAME_EN = "Two Piece Inc.";
@@ -6,6 +6,7 @@ export const COMPANY_NAME_EN = "Two Piece Inc.";
 export const NAV_ITEMS: NavItem[] = [
   { label: '会社概要', href: '#company' },
   { label: '事業内容', href: '#services' },
+  { label: '支援事例', href: '#case' },
   { label: '方針', href: '#policy' },
   { label: 'お知らせ', href: '#news' },
   { label: 'お問い合わせ', href: '#contact' },
@@ -23,6 +24,72 @@ export const SERVICES: ServiceItem[] = [
   {
     title: "インサイド業務の支援",
     description: "問い合わせ一次対応やヒアリング設計、データ整備を支援します。"
+  }
+];
+
+export const CASE_STUDIES: CaseStudyItem[] = [
+  {
+    title: "飲食店（3店舗／従業員60名）",
+    theme: "応募〜面接の歩留まり改善",
+    challenges: [
+      "求人媒体に出しても応募が安定しない",
+      "面接のドタキャンが多い",
+      "募集要件が曖昧でミスマッチ入社→早期離職が発生"
+    ],
+    supports: [
+      "職種別の求人票再設計（店長候補／ホール／キッチン）",
+      "店舗写真・原稿ディレクション、媒体運用（週次改善）",
+      "面接テンプレ・評価基準の統一、日程調整〜合否連絡の運用代行",
+      "オンボーディング整備（初週・初月の定着コミュニケーション）"
+    ],
+    results: [
+      "応募数：月5件 → 月22件",
+      "採用：計4名（店長候補1／ホール2／キッチン1）",
+      "3か月以内離職：発生率が大幅に改善"
+    ],
+    period: "3か月"
+  },
+  {
+    title: "IT受託開発（従業員25名）",
+    theme: "スカウト返信率の改善",
+    challenges: [
+      "スカウトを送っても返信が少ない",
+      "求人に「何をやる会社か」が伝わらずミスマッチ面談が多い",
+      "面談がカジュアルになり過ぎて選考が前に進まない"
+    ],
+    supports: [
+      "採用ターゲット定義（許容範囲と育成前提の線引き）",
+      "訴求軸の整理（案件特徴／技術裁量／働き方／評価）",
+      "スカウト文面のABテスト、送信条件・検索条件の最適化",
+      "面談設計（見極め項目、口説きの順序、クロージング台本）"
+    ],
+    results: [
+      "スカウト返信率：1〜2% → 6〜8%",
+      "有効面談率（面談→次工程）：20%台 → 50%前後",
+      "採用：計2名（即戦力1／育成枠1）"
+    ],
+    period: "2.5か月"
+  },
+  {
+    title: "不動産営業（従業員40名）",
+    theme: "継続採用と定着の仕組み化",
+    challenges: [
+      "採用しても成果が出る前に離職し、採用が止まらない",
+      "求人の訴求が「稼げる」一辺倒でミスマッチが多い",
+      "面接評価が属人化し、入社後の育成基準も曖昧"
+    ],
+    supports: [
+      "ターゲット再定義（適性要件／行動特性を明文化）",
+      "求人原稿刷新（商材・教育体制・評価制度・ロールモデル提示）",
+      "選考設計（一次で見る項目、ロープレ課題、合否基準の統一）",
+      "入社後育成の型化（初月KPI、テンプレ、面談同席の運用）"
+    ],
+    results: [
+      "有効面談率（面談→次工程）：約2倍に改善",
+      "採用：計2名（未経験1／経験者1）",
+      "早期離職：発生率が改善し、育成の再現性が向上"
+    ],
+    period: "4か月"
   }
 ];
 

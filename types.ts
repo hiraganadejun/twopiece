@@ -21,3 +21,12 @@ export interface FaqItem {
 export interface PolicyItem {
   text: string;
 }
+
+export interface CaseStudyItem {
+  title: string;
+  theme: string;
+  challenges: string[];
+  supports: string[];
+  results: string[];
+  period?: string;
+}

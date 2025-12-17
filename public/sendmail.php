@@ -30,7 +30,7 @@ if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
 }
 
 // メール送信先
-$to = 'yamashita@edge-quest.com';
+$to = 'info@twopiece-holdings.com';
 
 // 件名
 $subject = '【お問い合わせ】' . ($data['company'] ? $data['company'] . ' - ' : '') . $data['name'] . '様より';
