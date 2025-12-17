@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
           </div>
 
           <p className="text-xs text-gray-500 pt-8 border-t border-gray-200 inline-block">
-            ※当社の支援は、主に関係会社・グループ内を中心に提供しています。
+            
           </p>
         </div>
 
